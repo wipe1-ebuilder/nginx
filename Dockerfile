@@ -1,7 +1,4 @@
-FROM docker-registry.hq.local/ioof/rhel7_base
-
-RUN yum install nginx -y \
-    && yum clean all && rm -rf /var/cache/yum
+FROM nginx
 
 EXPOSE 443
 EXPOSE 80

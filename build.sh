@@ -1,8 +1,8 @@
 #!/bin/sh -e
 
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
-IMAGE_NAME=dev_reverse_proxy
-FULL_IMAGE_NAME=dev/corporate-actions-service/${IMAGE_NAME}
+IMAGE_NAME=reverse_proxy
+FULL_IMAGE_NAME=dev/asis-web/${IMAGE_NAME}
 DOCKER_FILE_NAME=Dockerfile
 DOCKER_REGISTRY=docker-registry.hq.local
 
