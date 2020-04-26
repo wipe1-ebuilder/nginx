@@ -7,3 +7,11 @@ services:
     ports:
       - "443:443"
       - "80:80"
+
+  reverse_proxy_git:
+    image: docker-registry.hq.local/dev/asis-web/reverse_proxy
+    volumes:
+      - ./nginx_local_git.conf:/etc/nginx/nginx.conf:ro
+    ports:
+      - "443:443"
+      - "80:80"
