@@ -4,6 +4,9 @@ services:
 
   reverse_proxy:
     image: docker-registry.hq.local/dev/asis-web/reverse_proxy
+    volumes:
+      - ./nginx_proxy.conf:/etc/nginx/nginx.conf:ro
+      - ./:/www/data
     ports:
       - "443:443"
       - "80:80"
