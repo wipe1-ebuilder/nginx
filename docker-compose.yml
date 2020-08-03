@@ -4,6 +4,8 @@ services:
 
   reverse_proxy:
     image: docker-registry.hq.local/dev/asis-web/reverse_proxy
+    volumes:
+      - ./nginx_local_pension_service.conf:/etc/nginx/conf.d/default.conf
     ports:
       - "443:443"
       - "80:80"
